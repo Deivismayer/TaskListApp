@@ -24,16 +24,15 @@ title: string = "Nova Tarefas";
 
   ngOnInit() {
     const id = this.activateRoute.snapshot.paramMap.get('id');
-    if (id) { 
+    if (id) {
         this.task = this.TaskService.getById(parseInt(id));
         this.title = 'AlterandoTarefa';
-
-
-    }
+          } 
 
   }
-onSubmit(){
+onSubmit() {
+  this.TaskService.save(this.task);
+  this.router.navigate(['']);
 
-  
 }
-}
+} 

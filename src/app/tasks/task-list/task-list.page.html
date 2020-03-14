@@ -14,8 +14,8 @@
       </ion-item>
 
       <ion-item-options side="start">
-        <ion-item-option color="warning">
-          <ion-icon slot="icon-only" [routerLink]="['/edit',task.id]"  
+        <ion-item-option [routerLink]="['/edit',task.id]" color="warning">
+          <ion-icon slot="icon-only"   
           name="create-outline" color="light"></ion-icon>
           Edit
         </ion-item-option>
